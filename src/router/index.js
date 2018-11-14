@@ -12,6 +12,16 @@ const Index = (resolve) => {
     resolve(module)
   })
 }
+const login = (resolve) => {
+  import ('components/index/login').then((module) => {
+    resolve(module)
+  })
+}
+const yindao = (resolve) => {
+  import ('components/index/yindao').then((module) => {
+    resolve(module)
+  })
+}
 const Xiaoxi = (resolve) => {
   import ('components/xiaoxi/xiaoxi').then((module) => {
     resolve(module)
@@ -45,6 +55,17 @@ export default new Router({
       name: 'mine',
       component: Mine
     },
+    {
+      path: '/login',
+      name: 'login',
+      component: login
+    },
+    {
+      path: '/yindao',
+      name: 'yindao',
+      component: yindao
+    },
+    
    
   ]
 })
